@@ -38,13 +38,8 @@ public class TechnologicalEnterprice extends ServiceEnterprice{
 	return treesToPlant;
 	}
 
-	//R#6 Registrar encuestas
-	public  double getsatisfactionLevel(int answer1, int answer2, int answer3){
-			
-		satisfactionLevel = answer1 + answer2 + answer3;		
-
-	return satisfactionLevel;
-	}
+	
+	
 
 	public String toString(){
 

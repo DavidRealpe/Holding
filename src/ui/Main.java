@@ -36,20 +36,21 @@ public class Main{
 
 	
 	System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
-	System.out.println("|													|");
+	System.out.println("|										|");
 	System.out.println("|				Bienvenido al software  			|");
-	System.out.println("|													|");
+	System.out.println("|										|");
 	System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
 
 	System.out.println("1. Ver lista de empresas actuales.");
-	System.out.println("2. Crear empresa..");
+	System.out.println("2. Crear empresa.");
+	System.out.println("3. Realizar encuestas. ");
 	System.out.print("Seleccione la opción que desee: ");
 
 	int option = reader.nextInt();
 
 	switch(option){
 		case 1: 
-			System.out.println("");
+			System.out.println(""); // REPORTE DE EMPRESAS
 		break;
 		case 2:
 			System.out.println("Que tipo de empresa desea crear?");
@@ -524,10 +525,8 @@ public class Main{
 				}				
 			}
 		break;
-	}
-}
-}
-				/*System.out.println("En una escala del 1 al 5, donde 1 es nada satisfecho y 5 es muy satisfecho, que tan satisfecho se encuentra con:");
+		case 3:
+				System.out.println("En una escala del 1 al 5, donde 1 es nada satisfecho y 5 es muy satisfecho, que tan satisfecho se encuentra con:");
 				System.out.print("- El servicio prestado: ");
 				int answer1 = reader.nextInt();
 				System.out.print("- El tiempo de respuesta dado: ");
@@ -535,6 +534,11 @@ public class Main{
 				System.out.print("- La relacion costo/beneficio del servicio aquirido: ");
 				int answer3 = reader.nextInt();
 
-				eh.getsatisfactionLevel(answer1, answer2, answer3);*/
+				eh.getsatisfactionLevel(answer1, answer2, answer3);
+		break;
+	}
+}
+}
+				
 
 

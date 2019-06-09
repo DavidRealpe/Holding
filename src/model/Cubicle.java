@@ -3,18 +3,34 @@ package model;
 public class Cubicle{
 	
 	//Atributes
+	private String extension;
+	private boolean availability;
 
-	private String empName;
-	private String empCharge;
-	private String empEmail;
-	private String extention;
-	private boolean availability = false;
+	private Employee employee;
 
 	//Constructor
-	public Cubicle(String extention, boolean availability){
-		this.extention = extention;
+	public Cubicle(String extension, boolean availability, Employee employee){
+		this.extension = extension;
 		this.availability = availability;
+		this.employee = employee;
+
 	}
 
+	public String getExtension(){
+		return extension;
+	}
+
+	public boolean getAvailability(){
+
+		if(employee==null)
+			availability = true;
+
+	return availability;
+	}
+
+	public Employee getEmployee(){
+		return employee;
+	}
+	
 
 }
