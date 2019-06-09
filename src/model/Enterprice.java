@@ -1,6 +1,5 @@
 package model;
 
-//  																		???????????  CLASE ABSTRACTA  ???????????
 
 public abstract class Enterprice{
 	
@@ -13,7 +12,20 @@ public abstract class Enterprice{
 	protected double assetValue;
 	protected String representativeName;
 
+	//Relations
+	protected Building building;
+
 	//	Constructor
+	/** 
+	* This method allows to inicializate the variables
+	*@param name Is the name of the enterprice,  name != null, name != " "
+	*@param nit Is the nit of the enterprice,  nit != null, nit != " "
+	*@param address Is the address of the enterprice,  address != null, address != " "
+	*@param phone Is the phone of the enterprice,  phone != null, phone != " "
+	*@param employeeQuantity Is the employeeQuantity of the enterprice,  employeeQuantity != null
+	*@param assetValue Is the assetValue of the enterprice,  assetValue != null
+	*@param representativeName Is the representativeName of the enterprice,  representativeName != null
+	*/
 	public Enterprice(String name, String nit, String address, String phone, int employeeQuantity, double assetValue, String representativeName){
 		this.name = name;
 		this.nit = nit;
@@ -22,23 +34,5 @@ public abstract class Enterprice{
 		this.employeeQuantity = employeeQuantity;
 		this.assetValue = assetValue;
 		this.representativeName = representativeName;
-	}
-
-	public String toString(){  //Se puede hacer una interface con un toString??? al fin y al cabo es un metodo que tendran varias calsese con diferentes argumento y mismos parametros
-
-		return "~~It is a list of the whole actual enterprices~~~"+"\n"+"Name: "+name+"\n"+"Nit: "+nit+"\n"+"Address: "+address+"\n"+"Phone: "+phone+"\n"
-		+"Employee quantity: "+employeeQuantity+"\n"+"Asset value: "+assetValue+"\n"+"Name of the representative: "+representativeName+"\n";
-
-	}
-
-	//Recorrido en X
-	/*public void recorridos(String eExtencion){
-		int fila1 = 0;
-		int fila2 = tower.lenght-1;
-		int 
-		for(){
-
-		}
-	}*/
-	
+	}	
 }

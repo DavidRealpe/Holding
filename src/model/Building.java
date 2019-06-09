@@ -12,6 +12,9 @@ public class Building{
 	private Cubicle[][] cubicles;
 
 	//Constructor
+	/** This method allows to inicializate the atributes
+	*@param floors Is the number of floors of a building,  floors != null
+	*/
 	public Building(int floors){
 		this.floors = floors;
 		cubicles = new Cubicle[floors][MAX_CUBICLES];
@@ -19,8 +22,13 @@ public class Building{
 
 	//R# 11 Buscar extension de empleado
 	
-	//  En L
-	public String routeL(String nameEmploy){
+	
+	/** This method allows to inicializate the variables.
+	* pre: cubicles is already inicializated.
+	* post: The extension of the desired employee.
+	*@param nameEmploy Is the name of the employee name of the employee who will be looking for the cubicle extension,  nameEmploy != null, nameEmploy != " "
+	*/
+	public String routeL(String nameEmploy){ //  En L
 
 		String output = "";
 
@@ -43,22 +51,26 @@ public class Building{
 
 		 	if(lowL == true){
 
-		   		for(int k=1; k<cubicles[0].length; k++){
+		   		for(int j=1; j<cubicles[0].length; j++){
 
-		   		String empN = cubicles[c][k].getEmployee().getEmpName();
+		   		String empN = cubicles[c][j].getEmployee().getEmpName();
 
 		      		if(empN.equals(nameEmploy)){
 
-		        	output = "La extension del cubiculo del empleado "+ empN +" es: " + cubicles[k][m].getExtension();
+		        	output = "La extension del cubiculo del empleado "+ empN +" es: " + cubicles[c][j].getExtension();
 		    	}
 		 	}
 		}
 	return output;
 	}
 
-	// En Z
-
-	public String routeZ(String nameEmploy){
+	
+	/** This method allows to inicializate the variables.
+	* pre: cubicles is already inicializated.
+	* post: The extension of the desired employee.
+	*@param nameEmploy Is the name of the employee name of the employee who will be looking for the cubicle extension,  nameEmploy != null, nameEmploy != " "
+	*/
+	public String routeZ(String nameEmploy){ // En Z
 
 		String output = "";
 
@@ -94,9 +106,13 @@ public class Building{
 	return output;
 	}
 
-	// En X
 	
-	public String routX(String nameEmploy){
+	/** This method allows to inicializate the variables.
+	* pre: cubicles is already inicializated.
+	* post: The extension of the desired employee.
+	*@param nameEmploy Is the name of the employee name of the employee who will be looking for the cubicle extension,  nameEmploy != null, nameEmploy != " "
+	*/
+	public String routX(String nameEmploy){ // En X
 
 		String output ="";
 
@@ -130,9 +146,12 @@ public class Building{
 	return output;
 	}
 
-	//Espiral en E
-
-	public String spiralE(String nameEmploy){
+	/** This method allows to inicializate the variables.
+	* pre: cubicles is already inicializated.
+	* post: The extension of the desired employee.
+	*@param nameEmploy Is the name of the employee name of the employee who will be looking for the cubicle extension,  nameEmploy != null, nameEmploy != " "
+	*/
+	public String spiralE(String nameEmploy){	//Espiral en E
 
 		String output = "";
 
@@ -184,8 +203,12 @@ public class Building{
 	return output;
 	}
 
-	//Espiral completo 
-	public String completeSpiral(String nameEmploy){
+	/** This method allows to inicializate the variables.
+	* pre: cubicles is already inicializated.
+	* post: The extension of the desired employee.
+	*@param nameEmploy Is the name of the employee name of the employee who will be looking for the cubicle extension,  nameEmploy != null, nameEmploy != " "
+	*/
+	public String completeSpiral(String nameEmploy){	//Espiral completo 
 
 		String output = "";
 
@@ -223,8 +246,13 @@ public class Building{
 	return output;
 	}
 
-	//En espiral
-	public String Spiral(String chargeEmp){
+	
+	/** This method allows to inicializate the variables.
+	* pre: cubicles is already inicializated.
+	* post: The extension of the desired employee.
+	*@param chargeEmp Is the charge of the employee who will be looking for his E-mail,  chargeEmp != null, chargeEmp != " "
+	*/
+	public String Spiral(String chargeEmp){ //En espiral
 
 	String output = "";
 
@@ -237,40 +265,48 @@ public class Building{
 
 		for(int i = f1; i < f2;i++){
 
-			if(cubicles[i][c1].getPosition().equals(chargeEmp))
+		String empEm = cubicles[i][c1].getEmployee().getEmpEmail();
 
-				output += "El empleado:" + cubicles[i][c1].getEmail();
+			if(empEm.equals(chargeEmp))
+
+				output += "El E-mail del empleado es:" + empEm;
 			}
 		}
 		c1++;
 
 		for(int i = c1; i < c2;i++){
 
-			if(cubicles[f2][i].getPosition().equals(chargeEmp)){
+		String empEm = cubicles[f2][i].getEmployee().getEmpEmail();
 
-				output += "El empleado:" + cubicles[f2][i].getEmail();
+			if(empEm.equals(chargeEmp)){
+
+				output += "El E-mail del empleado es:" + empEm;
 			}
 		}		
 		f2--;
 
 		for(int i = f2; i >= f1 ;i--){
 
-			if(cubicles[i][c2].getPosition().equals(chargeEmp)){
+		String empEm = cubicles[i][c2].getEmployee().getEmpEmail();
 
-				output += "El empleado:" + cubicles[i][c2].getEmail();
+			if(empEm.equals(chargeEmp)){
+
+				output += "El E-mail del empleado es:" + empEm;
 			}
 		}
 		c2--;
 
 		for(int i = c2; i >= c1;i--){
 
-			if(cubicles[f1][i].getPosition().equals(chargeEmp)){
+		String empEm = cubicles[f1][i].getEmployee().getEmpEmail();
 
-				output += "El empleado:" + cubicles[f1][i].getEmail();
+			if(empEm.equals(chargeEmp)){
+
+				output += "El E-mail del empleado es:" + empEm;
 			}
 		}
 		f1++;
-		
+
 	return output;
 	}
 }
