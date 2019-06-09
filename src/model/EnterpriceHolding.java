@@ -132,8 +132,8 @@ public class EnterpriceHolding extends Enterprice{
 	 * @param organizationType   Is the type of organization that the enterprice is,  organizationType != null
 	 * @param focus              Is the aspect in which the company focuses, focus != null, focus != " "
 	 */
-	public void addEnterprice(String name, String nit, String address, String phone, int employeeQuantity, double assetValue, String representativeName, String organizationType,
-		String focus){
+	public void addEnterprice(String name, String nit, String address, String phone, int employeeQuantity, double assetValue, String representativeName, String organizationType, 
+		String enterpriceType, int totalSubs, int subsInStratum1n2){
 
 		normalEnterprice.add(new FoodEnterprice(name, nit, address, phone, employeeQuantity, assetValue, representativeName, organizationType, focus));
 	}

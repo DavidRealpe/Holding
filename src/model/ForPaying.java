@@ -2,5 +2,5 @@ package model;
 
 public interface ForPaying{
 
-	double procultureTax();
+	public double procultureTax();
 }

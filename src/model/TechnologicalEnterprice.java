@@ -13,7 +13,6 @@ public class TechnologicalEnterprice extends ServiceEnterprice{
 	//Atributes
 	private String service;
 	private double energyUsed;
-	private double satisfactionLevel;
 
 	//Constructor
 	/**
