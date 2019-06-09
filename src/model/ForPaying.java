@@ -1,6 +1,6 @@
 package model;
 
-public interface PorPagar{
+public interface ForPaying{
 
 	double procultureTax();
 }

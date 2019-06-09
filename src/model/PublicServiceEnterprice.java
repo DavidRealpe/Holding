@@ -1,18 +1,21 @@
 package model;
 
-public class PublicServiceEnterprice extends ServiceEnterprice implements PorPagar{
+public class PublicServiceEnterprice extends ServiceEnterprice implements ForPaying{
 
+	//Constants
+	public final static String SEWER = "S"; 
+	public final static String ENERGY = "E";
+	public final static String AQUEDUCT = "A";
 	//Atributes
-	private double satisfactionLevel;
+	//private double satisfactionLevel; //borrar y poner solo en ServiceEnterprice
 	private String enterpriceType;
 	private int totalSubs;
 	private int subsInStratum1n2;
 
 	//Cosntructor
 	public PublicServiceEnterprice(String name, String nit, String address, String phone, int employeeQuantity, double assetValue, String representativeName, String organizationType, 
-		double satisfactionLevel, String enterpriceType, int totalSubs, int subsInStratum1n2){
+		String enterpriceType, int totalSubs, int subsInStratum1n2){
 		super(name, nit, address, phone, employeeQuantity, assetValue, representativeName, organizationType);
-		this.satisfactionLevel = satisfactionLevel;
 		this.enterpriceType = enterpriceType;
 		this.totalSubs = totalSubs;
 		this.subsInStratum1n2 = subsInStratum1n2;

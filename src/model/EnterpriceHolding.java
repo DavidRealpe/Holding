@@ -42,13 +42,21 @@ public class EnterpriceHolding extends Enterprice{
 			status, expiration, modality));
 	}
 
-	//PublicServiceEnterprice
+	//					PublicServiceEnterprice
 
 	public void addEnterprice(String name, String nit, String address, String phone, int employeeQuantity, double assetValue, String representativeName, String organizationType, 
 		double satisfactionLevel, String enterpriceType, int totalSubs, int subsInStratum1n2){
 
 		normalEnterprice.add(new PublicServiceEnterprice(name, nit, address, phone, employeeQuantity, assetValue, representativeName, organizationType, satisfactionLevel, enterpriceType, 
 			totalSubs, subsInStratum1n2));
+	}
+
+	//					FoodEnterprice
+	public void addEnterprice(String name, String nit, String address, String phone, int employeeQuantity, double assetValue, String representativeName, String organizationType, 
+		String focus){
+
+		normalEnterprice.add(new FoodEnterprice(name, nit, address, phone, employeeQuantity, assetValue, representativeName, organizationType, focus));
+
 	}
 
 	public String toString(){

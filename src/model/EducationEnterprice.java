@@ -1,6 +1,6 @@
 package model;
 
-public class EducationEnterprice extends ServiceEnterprice implements PorPagar{
+public class EducationEnterprice extends ServiceEnterprice implements ForPaying{
 
 	//Constants
 	public final static int HIGH_SCHOOL = 1;
